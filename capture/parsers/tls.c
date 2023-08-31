@@ -887,6 +887,18 @@ void moloch_parser_init()
         0, MOLOCH_FIELD_FLAG_FAKE,
         (char *)NULL);
 
+    moloch_field_define("cert", "integer",
+        "cert.validforSeconds", "Seconds Valid For", "cert.validSeconds",
+        "Certificate is valid for this many seconds total",
+        0, MOLOCH_FIELD_FLAG_FAKE,
+        (char *)NULL);
+
+    moloch_field_define("cert", "integer",
+        "cert.remainingSeconds", "Seconds remaining", "cert.remainingSeconds",
+        "Certificate is still valid for this many seconds",
+        0, MOLOCH_FIELD_FLAG_FAKE,
+        (char *)NULL);
+
     moloch_field_define("cert", "termfield",
         "cert.curve", "Curve", "cert.curve",
         "Curve Algorithm",
